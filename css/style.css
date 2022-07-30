@@ -48,10 +48,21 @@ li a {
   padding: 2rem 5rem;
 }
 
-#imagem {
-  background-image: url(/imagens/Stefanny.jpg);
-  background-size: cover;
+.carrossel {
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
   height: 800px;
+  width: 564px;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: tranform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+img {
+  object-fit: cover;
   width: 564px;
 }
 

@@ -1,3 +1,8 @@
+const imgs = document.getElementById("img");
+const img = document.querySelectorAll("#img img");
+
+let idx = 0;
+
 const cards = [
   {
     id: 1,
@@ -37,3 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     cardGroup.appendChild(div);
   })
 })
+
+function carrossel(){
+  idx++;
+
+  if(idx > img.length - 1){
+    idx = 0;
+  }
+
+  imgs.style.transform = `translateX(${-idx * 564}px)`;
+}
+
+setInterval(carrossel, 2000);
